@@ -16,11 +16,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use('/', express.static(path.join(__dirname + '/app')))
+// app.get('/', function(req,res){
+// 	res.send('Hello World!');
+// });
 
 require('./app/routing/apiroutes.js')(app); 
 require('./app/routing/htmlroutes.js')(app);
-
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);

@@ -9,7 +9,7 @@ module.exports = function(app) {
     //This route will also be used to handle the compatibility logic.
 
     app.get('/api/friends', function(req, res) {
-        res.json(friendsArray);
+        res.json(friends);
     });
 
 
